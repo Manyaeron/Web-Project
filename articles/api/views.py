@@ -12,8 +12,8 @@ from rest_framework.generics import (
     DestroyAPIView,
     UpdateAPIView
 )
-from articles.models import Article
-from .serializers import ArticleSerializer
+from articles.models import Article, Propose_Article
+from .serializers import ArticleSerializer, Propose_ArticleSerializer
 
 
 class ArticleListView(ListAPIView):
@@ -43,4 +43,24 @@ class ArticleUpdateView(UpdateAPIView):
 class ArticleDeleteView(DestroyAPIView):
     queryset = Article.objects.all()
     serializer_class = ArticleSerializer
+    permission_classes = (permissions.IsAuthenticated, )
+
+
+
+
+class P_ArticleListView(ListAPIView):
+    queryset = Propose_Article.objects.all()
+    serializer_class = Propose_ArticleSerializer
+    permission_classes = (permissions.AllowAny, )
+
+
+class P_ArticleDetailView(RetrieveAPIView):
+    queryset = Propose_Article.objects.all()
+    serializer_class = Propose_ArticleSerializer
+    permission_classes = (permissions.AllowAny, )
+
+
+class P_ArticleCreateView(CreateAPIView):
+    queryset = Propose_Article.objects.all()
+    serializer_class = Propose_ArticleSerializer
     permission_classes = (permissions.IsAuthenticated, )

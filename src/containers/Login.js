@@ -7,7 +7,8 @@ import * as actions from '../store/actions/auth';
 const FormItem = Form.Item;
 const antIcon = < Icon type = "loading"
 style = {
-    { fontSize: 24 } }
+    { fontSize: 24 }
+}
 spin / > ;
 
 
@@ -52,7 +53,8 @@ class NormalLoginForm extends React.Component {
                                 })( <
                                     Input prefix = { < Icon type = "user"
                                         style = {
-                                            { color: 'rgba(0,0,0,.25)' } }
+                                            { color: 'rgba(0,0,0,.25)' }
+                                        }
                                         />} placeholder="Username" / >
                                     )
                                 } <
@@ -65,7 +67,8 @@ class NormalLoginForm extends React.Component {
                                     })( <
                                         Input prefix = { < Icon type = "lock"
                                             style = {
-                                                { color: 'rgba(0,0,0,.25)' } }
+                                                { color: 'rgba(0,0,0,.25)' }
+                                            }
                                             />} type="password" placeholder="Password" / >
                                         )
                                     } <
@@ -77,16 +80,18 @@ class NormalLoginForm extends React.Component {
                                     Button type = "primary"
                                     htmlType = "submit"
                                     style = {
-                                        { marginRight: '10px' } } >
+                                        { marginRight: '10px' }
+                                    } >
                                     Login <
                                     /Button>
                                     Or <
                                     NavLink
                                     style = {
-                                        { marginRight: '10px' } }
+                                        { marginRight: '10px' }
+                                    }
                                     to = '/signup/' > signup <
-                                    /NavLink> <
-                                    /FormItem> <
+                                    /NavLink> < /
+                                    FormItem > <
                                     /Form>
                                 } <
                                 /div>

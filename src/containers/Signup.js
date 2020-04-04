@@ -20,6 +20,7 @@ class RegistrationForm extends React.Component {
                         values.email,
                         values.password,
                         values.confirm
+
                     );
                     this.props.history.push('/');
                 }
@@ -62,7 +63,8 @@ class RegistrationForm extends React.Component {
                             })( <
                                 Input prefix = { < Icon type = "user"
                                     style = {
-                                        { color: 'rgba(0,0,0,.25)' } }
+                                        { color: 'rgba(0,0,0,.25)' }
+                                    }
                                     />} placeholder="Username" / >
                                 )
                             } <
@@ -81,11 +83,13 @@ class RegistrationForm extends React.Component {
                                 })( <
                                     Input prefix = { < Icon type = "mail"
                                         style = {
-                                            { color: 'rgba(0,0,0,.25)' } }
+                                            { color: 'rgba(0,0,0,.25)' }
+                                        }
                                         />} placeholder="Email" / >
                                     )
                                 } <
                                 /FormItem>
+
 
                                 <
                                 FormItem > {
@@ -99,7 +103,8 @@ class RegistrationForm extends React.Component {
                                     })( <
                                         Input prefix = { < Icon type = "lock"
                                             style = {
-                                                { color: 'rgba(0,0,0,.25)' } }
+                                                { color: 'rgba(0,0,0,.25)' }
+                                            }
                                             />} type="password" placeholder="Password" / >
                                         )
                                     } <
@@ -117,8 +122,9 @@ class RegistrationForm extends React.Component {
                                         })( <
                                             Input prefix = { < Icon type = "lock"
                                                 style = {
-                                                    { color: 'rgba(0,0,0,.25)' } }
-                                                />} type="password" placeholder="Password" onBlur={this.handleConfirmBlur} / >
+                                                    { color: 'rgba(0,0,0,.25)' }
+                                                }
+                                                />} type="password" placeholder="Confirm Password" onBlur={this.handleConfirmBlur} / >
                                             )
                                         } <
                                         /FormItem>
@@ -129,16 +135,18 @@ class RegistrationForm extends React.Component {
                                         Button type = "primary"
                                         htmlType = "submit"
                                         style = {
-                                            { marginRight: '10px' } } >
+                                            { marginRight: '10px' }
+                                        } >
                                         Signup <
                                         /Button>
                                         Or <
                                         NavLink
                                         style = {
-                                            { marginRight: '10px' } }
+                                            { marginRight: '10px' }
+                                        }
                                         to = '/login/' > login <
-                                        /NavLink> <
-                                        /FormItem>
+                                        /NavLink> < /
+                                        FormItem >
 
                                         <
                                         /Form>

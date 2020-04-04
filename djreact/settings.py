@@ -23,7 +23,9 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
 
-    'articles'
+    'articles',
+    'users'
+   
 ]
 
 MIDDLEWARE = [
@@ -96,6 +98,7 @@ REST_FRAMEWORK = {
     ),
 }
 CORS_ORIGIN_WHITELIST = (
+    'Access-Control-Allow-Origin',
     'localhost:3000',
 )
 

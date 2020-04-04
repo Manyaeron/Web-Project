@@ -42,8 +42,9 @@ const Articles = props => {
                             />}
                             title = { < a href = { `/articles/${item.id}` } > { item.title } < /a>}
                                 description = { item.description }
-                                /> { item.content } <
-                                /List.Item>
+                                //</a> datetime = { item.datetime }
+                                /> { item.content } < /
+                                List.Item >
                             )
                         }
                         />
